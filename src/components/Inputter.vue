@@ -84,17 +84,29 @@ function getTusta(c) {
 </script>
 
 <template>
+  <div class="inputter">
   <div>
     <input v-model="input" />
   </div>
 
-  <div>
+  <div class="output">
     <ul>
       <li v-for="c in input">
         {{ c }} : {{ getTusta(c) }}
       </li>
     </ul>
   </div>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.inputter {
+  font-family:'Courier New', Courier, monospace;
+}
+.output {
+  padding-top: 20px;
+}
+li {
+  list-style: none;
+}
+</style>
